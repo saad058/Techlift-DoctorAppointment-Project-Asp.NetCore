@@ -1,0 +1,236 @@
+/**********************************************************************
+***********************************************************************
+### Template Customizer Setting
+**********************************************************************
+*********************************************************************/
+
+.avesta-settings {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1200;
+	transition: all 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.avesta-settings {
+		transition: none;
+	}
+}
+
+.avesta-settings.show {
+	right: 200px;
+	-webkit-box-shadow: 0px 0px 35px 5px rgba(190, 188, 200, 0.5);
+	-moz-box-shadow: 0px 0px 35px 5px rgba(190, 188, 200, 0.5);
+	-ms-box-shadow: 0px 0px 35px 5px rgba(190, 188, 200, 0.5);
+	box-shadow: 0px 0px 35px 5px rgba(190, 188, 200, 0.5);
+}
+
+.avesta-settings.show .avesta-settings-link {
+	position: relative;
+}
+
+.avesta-settings.show .avesta-settings-link,
+.avesta-settings.show .avesta-settings-link:hover,
+.avesta-settings.show .avesta-settings-link:focus {
+	background-color: #151c29;
+	border-color: $bd-color-default;
+	color: $color-white;
+}
+
+.avesta-settings-link {
+	position: absolute;
+	top: 50%;
+	left: -44px;
+	width: 45px;
+	height: 45px;
+	background-color: #151c29;
+	border: $bd-color-default;
+	border-right-width: 0;
+	color: $color-white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+	transition: all 0.2s ease-in-out;
+	z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.avesta-settings-link {
+		transition: none;
+	}
+}
+
+.avesta-settings-link:hover,
+.avesta-settings-link:focus {
+	color: $color-white;
+	background-color: #151c29;
+}
+
+.avesta-settings-body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background-color: $color-white;
+	border-left: 1px solid rgba(200, 210, 230, 0.5);
+	padding: 0 20px;
+	overflow-y: auto;
+}
+
+.avesta-demo-customizer,
+.avesta-mode {
+	width: 24px;
+	height: 24px;
+	border: 1px solid rgb(225, 229, 237);
+	display: flex;
+	margin-bottom: 10px;
+	padding: 1px;
+}
+
+.avesta-demo-customizer:hover,
+.avesta-demo-customizer:focus,
+.avesta-mode:hover,
+.avesta-mode:focus {
+	border-color: $color-default;
+}
+
+.avesta-demo-customizer.active,
+.avesta-mode.active {
+	position: relative;
+	border-color: $color-default;
+}
+
+.avesta-demo-customizer.active::before,
+.avesta-mode.active::before {
+	content: "\e64c";
+	font-family: 'themify';
+	font-size: 11px;
+	position: absolute;
+	top: 50%;
+	left: 55%;
+	line-height: 0;
+	margin-left: -6px;
+	margin-top: 0px;
+	color: $color-default;
+}
+
+.avesta-mode.avesta-mode-cool.active::before,
+.avesta-demo-customizer.avesta-demo-customizer-bluepurple.active::before,
+.avesta-demo-customizer.avesta-demo-customizer-gradient.active::before {
+	color: $color-white;
+}
+
+.avesta-demo-customizer.active~span,
+.avesta-mode.active~span {
+	color: #0168fa;
+}
+
+.avesta-demo-customizer.disabled,
+.avesta-mode.disabled {
+	cursor: default;
+	border-color: rgba(72, 94, 144, 0.16);
+	box-shadow: none;
+	opacity: .75;
+}
+
+.avesta-demo-customizer>span,
+.avesta-mode>span {
+	display: block;
+	flex: 1;
+}
+
+.demo-color-palet-1 {
+	background-color: #f5f6fa;
+}
+
+.demo-color-palet-2 {
+	background-color: #e5e9f2;
+}
+
+.avesta-header-skin-default span:first-child {
+	background-color: $color-white;
+}
+
+.avesta-header-skin-default span:last-child {
+	background-color: $color-white;
+}
+
+.avesta-header-skin-bluepurple span:first-child {
+	background-color: #152F7C;
+}
+
+.avesta-header-skin-bluepurple span:last-child {
+	background-color: #152F7C;
+}
+
+.avesta-header-skin-gradient span:first-child {
+	background-color: #5b47fb;
+}
+
+.avesta-header-skin-gradient span:last-child {
+	background-color: #0168fa;
+}
+
+.avesta-demo-customizer-default span:first-child {
+	background-color: $color-white;
+}
+
+.avesta-demo-customizer-default span:last-child {
+	background-color: #2d353e;
+}
+
+.avesta-demo-customizer-light span:first-child {
+	background-color: $color-white;
+}
+
+.avesta-demo-customizer-light span:last-child {
+	background-color: #f4f5f9;
+}
+
+.avesta-demo-customizer-bluepurple span:first-child {
+	background-color: #152F7C;
+}
+
+.avesta-demo-customizer-bluepurple span:last-child {
+	background-color: #152F7C;
+}
+
+.avesta-demo-customizer-gradient span:first-child {
+	background-color: #5b47fb;
+}
+
+.avesta-demo-customizer-gradient span:last-child {
+	background-color: #0168fa;
+}
+
+.avesta-demo-customizer-name {
+	font-size: 10px;
+	font-family: $font-family-system;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	color: #8392a5;
+	letter-spacing: 0.5px;
+}
+
+.font-customize a {
+	border: $bd-color-default;
+	padding: 10px 15px;
+	display: block;
+	margin: 5px;
+	border-radius: 2px;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #8392a5;
+	letter-spacing: 0.5px;
+}
+
+.font-customize a.active-font {
+	border: 1px solid $color-default;
+	color: $color-default;
+}

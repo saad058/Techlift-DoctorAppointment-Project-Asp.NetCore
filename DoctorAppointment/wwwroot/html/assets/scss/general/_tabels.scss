@@ -1,0 +1,113 @@
+/**********************************************************************
+***********************************************************************
+### Tables CSS
+*********************************************************************
+*********************************************************************/
+
+.table-primary thead tr th,
+.table-secondary thead tr th,
+.table-success thead tr th,
+.table-danger thead tr th,
+.table-warning thead tr th,
+.table-info thead tr th,
+.table-light thead tr th,
+.table-dark thead tr th {
+	color: $color-white;
+}
+
+.table-primary thead {
+	background-color: #0168fa;
+}
+
+.table-primary.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: #e2eeff;
+}
+
+.table-primary tbody tr {
+	background-color: #f1f7ff;
+}
+
+.table-primary.table-hover tbody tr:hover {
+	background-color: #e4edf9;
+}
+
+.table-dark {
+	color: $color-white;
+	background-color: #3b4863;
+}
+
+table.dataTable thead th div.DataTables_sort_wrapper {
+	position: relative;
+	font-weight: $font-weight-normal;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.dataTables_wrapper .dataTables_paginate .fg-button {
+	padding: .3em .6em;
+	border: 1px solid #e4e5f7;
+}
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter: Alpha(Opacity=35);
+	background-image: none;
+}
+
+table.dataTable.cell-border tbody tr:first-child th,
+table.dataTable.cell-border tbody tr:first-child td {
+	border-top: $bd-color-default;
+}
+
+table.dataTable.cell-border tbody tr:last-child td,
+table.dataTable.cell-border tbody tr:last-child td {
+	border-bottom: $bd-color-default;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+	bottom: 0.5em;
+}
+
+.dataTables_wrapper .ui-toolbar {
+	padding: 10px;
+	display: flow-root;
+}
+
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+	background-image: none;
+	background-color: #eceff3;
+	position: relative;
+}
+
+table.dataTable tbody td.sorting_1 {
+	background-color: #f3f4f7;
+}
+
+.footable-page-arrow a,
+.footable-page a {
+	display: block;
+	padding: 2px 8px;
+	border: 1px solid #e4e5f7;
+	margin: 2px;
+}
+
+.footable-page.active a {
+	border: 1px solid $color-white;
+	color: #b8b8b8;
+}
+
+#foo-filtering.table {
+	margin-bottom: inherit;
+}

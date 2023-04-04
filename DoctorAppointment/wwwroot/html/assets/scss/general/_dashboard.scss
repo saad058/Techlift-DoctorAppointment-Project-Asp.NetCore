@@ -1,0 +1,54 @@
+/**********************************************************************
+***********************************************************************
+### Dashboard CSS
+*********************************************************************
+*********************************************************************/
+
+.row.search-statistic {
+	margin: 30px -21px 0;
+	padding: 0px;
+	border-top: 1px solid #eee;
+}
+
+.dashboard-date.datepicker.input-group {
+	border: 1px solid #727cf5;
+}
+
+.dashboard-date.datepicker.input-group span {
+	border-left: none;
+	border-right: 1px solid #727cf5;
+}
+
+.dashboard-date.datepicker.input-group input {
+	height: 32px;
+	background: transparent;
+	color: #686868;
+}
+
+.traffic-source ul li a.active {
+	color: #4570e8;
+}
+
+.new-customer li .action-icon nav.nav-icon-only a {
+	display: none;
+}
+
+.new-customer li:hover .action-icon nav.nav-icon-only a {
+	display: block;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.card-progressbar {
+	display: flex;
+	align-items: center;
+	margin-bottom: 17px;
+}
+
+.card-progressbar .progress {
+	height: 3px;
+	flex: 1;
+	margin: 0 5px;
+}

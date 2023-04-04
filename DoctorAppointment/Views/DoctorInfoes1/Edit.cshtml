@@ -1,0 +1,105 @@
+﻿@model DoctorAppointment.Models.DoctorInfo
+
+@{
+    ViewData["Title"] = "Edit";
+   // Layout = "~/Views/Shared/_Layoutdd.cshtml";
+
+}
+<link href="~/css/site.css" rel="stylesheet" />
+<script src="~/js/site.js"></script>
+<h1>Edit</h1>
+
+<h4>DoctorInfo</h4>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DoctorId" />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsAvailable" /> @Html.DisplayNameFor(model => model.IsAvailable)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartmentId" class="control-label"></label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.DepartmentId, (SelectList)ViewData["DepartmentId"], new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="DoctorFee" class="control-label"></label>
+                <input asp-for="DoctorFee" class="form-control" />
+                <span asp-validation-for="DoctorFee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="First_Name" class="control-label"></label>
+                <input asp-for="First_Name" class="form-control" />
+                <span asp-validation-for="First_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Name" class="control-label"></label>
+                <input asp-for="Last_Name" class="form-control" />
+                <span asp-validation-for="Last_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" readonly />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-inline">
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Monday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Monday, "Monday")
+                </div>
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Tuesday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Tuesday, "Tuesday")
+                </div>
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Wednesday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Wednesday, "Wednesday")
+                </div>
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Thursday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Thursday, "Thursday")
+                </div>
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Friday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Friday, "Friday")
+                </div>
+
+
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Saturday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Saturday, "Saturday")
+                </div>
+
+                <div class="form-group checkbox-group">
+                    @Html.LabelFor(model => model.Weekdays.Sunday)
+                    @Html.CheckBoxFor(model => model.Weekdays.Sunday, "Sunday")
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="control-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HomeAddress" class="control-label"></label>
+                <input asp-for="HomeAddress" class="form-control" />
+                <span asp-validation-for="HomeAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

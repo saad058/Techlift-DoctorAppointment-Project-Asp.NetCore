@@ -1,0 +1,59 @@
+﻿@model DoctorAppointment.Models.UserLogin
+
+@{
+   
+    ViewData["Title"] = "Index";
+ 
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/DoctorAppointment.styles.css" asp-append-version="true" />
+
+<h1>Index</h1>
+
+<h4>Login</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4"  style="width:contain;padding:inherit;margin:auto;background-origin:initial">
+        @using (Html.BeginForm("Index", "UserLogin", FormMethod.Post))
+        {
+            if (ViewBag.LoginStatus != null)
+            {
+                if (ViewBag.LoginStatus == 0)
+                {
+                    <div class="alert alert-danger">Invalid Login Detail</div>
+                }
+            }
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LoginEmail" class="control-label"></label>
+                @Html.TextAreaFor(m=>m.LoginEmail,new{@class="form-control",@placeholder="Email"})
+                <span asp-validation-for="LoginEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                @Html.TextAreaFor(m=>m.Password,new{@class="form-control",@placeholder="Password"})
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserRole" class="control-label"></label>
+                @Html.TextAreaFor(m=>m.UserRole,new{@class="form-control",@placeholder="User Role"})
+
+                <span asp-validation-for="UserRole" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+            
+        }
+    </div>
+</div>
+
+<div>
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

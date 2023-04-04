@@ -1,0 +1,101 @@
+﻿@model DoctorAppointment.Models.PatientInfo
+
+@{
+    ViewData["Title"] = "Create";
+   // Layout = null;
+}
+
+
+<h1>Create</h1>
+
+<h4>PatientInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PatientHistory" class="control-label"></label>
+                <input asp-for="PatientHistory" class="form-control" />
+                <span asp-validation-for="PatientHistory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="First_Name" class="control-label"></label>
+                <input asp-for="First_Name" class="form-control" />
+                <span asp-validation-for="First_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Name" class="control-label"></label>
+                <input asp-for="Last_Name" class="form-control" />
+                <span asp-validation-for="Last_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNumber" class="control-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HomeAddress" class="control-label"></label>
+                <input asp-for="HomeAddress" class="form-control" />
+                <span asp-validation-for="HomeAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="appointment-day">Appointment Day</label>
+                <div class="btn-group" role="group" aria-label="Appointment Day">
+                    <button class="btn-success" id="button1" value="@DateTime.Now.Date.ToString("dd-MM-yyyy")">@DateTime.Now.DayOfWeek</button>
+                    <button class="btn-success" id="button2" value="@DateTime.Now.AddDays(1).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(1).DayOfWeek</button>
+                    <button class="btn-success" id="button3" value="@DateTime.Now.AddDays(2).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(2).DayOfWeek</button>
+                    <button class="btn-success" id="button4" value="@DateTime.Now.AddDays(3).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(3).DayOfWeek</button>
+                    <button class="btn-success" id="button5" value="@DateTime.Now.AddDays(4).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(4).DayOfWeek</button>
+                    <button class="btn-success" id="button6" value="@DateTime.Now.AddDays(5).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(5).DayOfWeek</button>
+                    <button class="btn-success" id="button7" value="@DateTime.Now.AddDays(6).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(6).DayOfWeek</button>
+
+
+
+                    @*<button type="button" class="btn btn-secondary appointment-day-btn" data-day="Tuesday">Tue</button>
+                    <button type="button" class="btn btn-secondary appointment-day-btn" data-day="Wednesday">Wed</button>
+                    <button type="button" class="btn btn-secondary appointment-day-btn" data-day="Thursday">Thu</button>
+                    <button type="button" class="btn btn-secondary appointment-day-btn" data-day="Friday">Fri</button>
+                    <button type="button" class="btn btn-secondary appointment-day-btn" data-day="Saturday">Sat</button>
+                    <button type="button" class="btn btn-secondary appointment-day-btn" data-day="Sunday">Sun</button>*@
+                </div>
+                <input type="text"  id="appointment-day" value="" >
+            </div>
+
+
+
+
+            <br />
+            <div class="form-group mb-xl-auto">
+                <a href="~/BookAppointment/Appointment" value="Create" class="btn btn-primary">Skip Add new patient</a>
+                <input type="submit" value="Create" class="btn btn-primary" />
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+
+//    const { Script } = require("vm");
+
+
+
+     $(document).ready(function() {
+         $('#button1, #button2,#button3, #button4, #button5, #button6,  #button7').click(function() {
+      var buttonValue = $(this).val();
+             $('#appointment-day').val(buttonValue);
+    });
+  });
+
+</script>

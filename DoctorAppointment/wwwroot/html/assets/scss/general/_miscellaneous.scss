@@ -1,0 +1,210 @@
+/**********************************************************************
+***********************************************************************
+### Miscellaneous
+*********************************************************************
+*********************************************************************/
+
+.search-form {
+	position: absolute;
+	left: 0;
+	right: 0;
+	border: 1px solid #ecf0f1;
+	background: $color-white;
+	height: 60px;
+	z-index: 41;
+	margin-top: -100px;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+	font-weight: $font-weight-normal;
+	opacity: 0
+}
+
+.search-form input {
+	font-size: 13px;
+	border: none;
+	height: 59px;
+	border-radius: 0;
+	box-shadow: none;
+	padding-left: 25px;
+	padding-bottom: 7px;
+	color: #3d464c;
+	background-color: $color-white
+}
+
+input::placeholder {
+	color: #bcc4d4;
+	opacity: 1;
+}
+
+.form-control::placeholder {
+	color: #bcc4d4;
+	opacity: 1;
+}
+
+.search-form input::placeholder {
+	color: #bcc4d4;
+}
+
+.search-form #close-search {
+	color: #1e212f;
+	border: none;
+	border-radius: 50%;
+	box-shadow: none;
+	margin: 18px 15px;
+	padding: 0 12px;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	right: 0;
+}
+
+.search-form #close-search i {
+	font-size: 25px;
+	vertical-align: text-top
+}
+
+.search-form input {
+	border-bottom: $bd-color-default;
+	box-shadow: none;
+}
+
+.search-form input:focus {
+	border-bottom: 1px solid transparent!important;
+	box-shadow: none;
+}
+
+.search-content {
+	position: absolute;
+	background: $color-white
+}
+
+.search-open .search-form {
+	margin-top: 0;
+	opacity: 1
+}
+
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+@-webkit-keyframes wave {
+	5% {
+		opacity: .6;
+	}
+	27% {
+		-webkit-transform: scale(1.8);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes wave {
+	5% {
+		opacity: .6;
+	}
+	27% {
+		-moz-transform: scale(1.8);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes wave {
+	5% {
+		opacity: .6;
+	}
+	27% {
+		-o-transform: scale(1.8);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes wave {
+	5% {
+		opacity: .6;
+	}
+	27% {
+		-webkit-transform: scale(1.8);
+		-moz-transform: scale(1.8);
+		-ms-transform: scale(1.8);
+		transform: scale(1.8);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.wave.in {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.wave.in:after {
+	content: "";
+	top: -5px;
+	left: -5px;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: -webkit-radial-gradient(center center, farthest-side circle, rgba(28, 181, 97, 0) 70%, rgba(69, 112, 232, 0.5) 100%);
+	background: -moz-radial-gradient(center center, farthest-side circle, rgba(26, 175, 93, 0) 70%, $color-default 100%);
+	background: -o-radial-gradient(center center, farthest-side circle, rgba(26, 175, 93, 0) 70%, $color-default 100%);
+	border: 1px solid rgba(69, 112, 230, 0.5);
+	-webkit-animation: wave 2s 1s infinite linear;
+	-moz-animation: wave 2s 1s infinite linear;
+	-o-animation: wave 2s 1s infinite linear;
+	animation: wave 2s 1s infinite linear;
+	zoom: 1;
+	filter: alpha(opacity=0);
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	-webkit-border-radius: 50%;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 50%;
+	-moz-background-clip: padding;
+	border-radius: 50%;
+	background-clip: padding-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.btn-scroll-top {
+	position: fixed;
+	bottom: 1.5625rem;
+	right: 1.5625rem;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 0.125rem;
+	z-index: 1000;
+	color: $color-white;
+	background: #232A31;
+	text-align: center;
+	line-height: 2.25rem;
+	text-decoration: none;
+	border: $bd-color-default;
+}
+
+.btn-scroll-top:hover {
+	color: $color-white;
+	border: 1px solid #232A31;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}

@@ -1,0 +1,436 @@
+/**********************************************************************
+***********************************************************************
+### Sidebar CSS
+*********************************************************************
+*********************************************************************/
+
+.page-sidebar {
+	font-weight: $font-weight-normal;
+	width: 250px;
+	background: #2d353e;
+	min-height: 100%;
+	float: left;
+	z-index: 100;
+	position: relative;
+	border-right: $bd-color-default;
+}
+
+.page-sidebar-fixed .page-sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	height: 100%!important;
+}
+
+body:not(.page-sidebar-fixed) .page-sidebar .slimScrollDiv {
+	height: auto!important
+}
+
+.page-sidebar-fixed .page-sidebar,
+.page-header-fixed .page-sidebar,
+.page-sidebar-fixed.page-header-fixed .page-sidebar {
+	padding-top: 60px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.page-header-fixed .page-sidebar {
+	width: 250px;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.page-sidebar .logo {
+	position: absolute;
+	z-index: 30;
+	top: 0;
+	left: 0;
+	width: 250px;
+	background-color: #293139;
+	text-align: center;
+	height: 60px;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	padding: 0 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-right: $bd-color-default;
+	border-bottom: 1px solid #36404a;
+}
+
+.page-sidebar-collapsed .page-sidebar .logo {
+	width: 60px;
+}
+
+.logo a.logo-img img {
+	max-height: 32px;
+	width: auto;
+}
+
+.page-sidebar-collapsed .logo a.logo-img img.desktop-logo {
+	display: none;
+}
+
+.logo a.logo-img img.small-logo {
+	display: none;
+	max-height: 28px;
+}
+
+.page-sidebar-collapsed .logo a.logo-img img.small-logo {
+	display: block;
+}
+
+.page-header-fixed .logo {
+	position: fixed;
+	top: 0;
+}
+
+.page-sidebar-menu {
+	margin: 10px 0;
+}
+
+.page-sidebar-fixed .page-sidebar .accordion-menu {
+	margin: -11px 0 60px 0;
+}
+
+.page-sidebar-menu ul {
+	padding: 0;
+	margin: 0
+}
+
+.page-sidebar-menu ul li {
+	list-style-type: none;
+	position: relative;
+	border-left: none;
+}
+
+.page-sidebar-menu ul li.menu-navigation,
+.page-sidebar-menu ul li.menu-elements,
+.page-sidebar-menu ul li.menu-extras,
+.page-sidebar-menu ul li.menu-others {
+	display: inline-block;
+	color: #eaecf1;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: $font-weight-medium;
+	letter-spacing: 1px;
+}
+
+.page-sidebar-menu ul li a {
+	display: block;
+	font-size: 13px;
+	padding: 7px 15px;
+	color: #8695a7;
+	line-height: 1.5!important;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+.page-sidebar-menu ul li.active>a i,
+.page-sidebar-menu ul li.active>a i.accordion-icon,
+.page-sidebar-menu ul li.open>a i.accordion-icon,
+.page-sidebar-menu ul li a:hover i.accordion-icon {
+	color: $color-white;
+}
+
+.page-sidebar-menu ul li.active>a {
+	color: $color-white;
+	position: relative;
+	background: #2d353e;
+}
+
+.page-sidebar-menu ul li a:link {
+	text-decoration: none
+}
+
+.page-sidebar-menu>ul>li>a span.badge-warning,
+.page-sidebar-menu>ul>li.open span.badge-warning {
+	color: #000;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu>ul>li>a:hover {
+	opacity: 1;
+}
+
+.page-sidebar-menu>ul>li>a:hover i.accordion-icon {
+	text-decoration: none
+}
+
+.page-sidebar-menu ul li a i.menu-icon {
+	margin-right: 10px;
+	font-size: 17px;
+	vertical-align: middle;
+	line-height: 22px
+}
+
+.page-sidebar-menu ul li a span {
+	margin-top: 2px;
+}
+
+.page-sidebar-menu ul li a:hover,
+.page-sidebar-menu ul li a:hover svg,
+.page-sidebar-menu ul>li.active a svg,
+.page-sidebar-menu ul>li.open a svg {
+	color: $color-white;
+}
+
+.page-sidebar-menu ul li.menu-divider {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: $bd-color-default;
+	margin: 0
+}
+
+.page-sidebar-menu ul li a svg {
+	color: #66768a;
+	height: 18px;
+	margin-right: 7px;
+}
+
+.page-sidebar-menu ul li a i.accordion-icon {
+	float: right;
+	font-size: 15px;
+	vertical-align: text-top;
+	color: #586777;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.page-sidebar-menu ul li.open a i.accordion-icon {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	/*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-3)*/
+}
+
+.page-sidebar-menu ul li .sub-menu a:hover {
+	color: $color-white;
+}
+
+.accordion-menu .sub-menu {
+	display: none;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	background: #2d353e
+}
+
+.page-sidebar-collapsed .page-content {
+	width: calc(100% - 60px)
+}
+
+.page-sidebar-fixed .page-content {
+	margin-left: 250px
+}
+
+.page-sidebar-fixed.page-sidebar-collapsed .page-content {
+	margin-left: 60px
+}
+
+.page-sidebar-collapsed .accordion-menu .sub-menu {
+	padding-bottom: 0;
+	padding-left: 0
+}
+
+.accordion-menu .sub-menu li.animation a {
+	opacity: 1
+}
+
+.accordion-menu .sub-menu li a {
+	border-top: 0;
+	padding: 5px 20px;
+	font-size: 13px;
+}
+
+.accordion-menu .sub-menu li a:before,
+.page-sidebar-menu ul li ul li.active>a:before {
+	top: 12px;
+	left: -5px;
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid $color-white;
+	position: absolute;
+}
+
+.accordion-menu .sub-menu li a:hover:before,
+.page-sidebar-menu ul li ul li.active>a:before {
+	top: 12px;
+	left: -5px;
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid #007bff;
+	position: absolute;
+	-webkit-transition: all .7s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.page-sidebar-collapsed .accordion-menu .sub-menu li a:before,
+.page-sidebar-collapsed .page-sidebar-menu ul li ul li.active>a:before {
+	background: transparent;
+	border: none;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li ul.sub-menu li a:hover:before,
+.page-sidebar-collapsed .page-sidebar-menu ul li ul.sub-menu li.active>a:before {
+	content: none;
+}
+
+.accordion-menu .sub-menu li a.active {
+	color: #000
+}
+
+.accordion-menu .sub-menu li a.active:hover {
+	color: #000!important
+}
+
+.page-sidebar-collapsed .page-sidebar {
+	width: 60px
+}
+
+.page-sidebar-collapsed.page-sidebar-fixed .page-sidebar {
+	height: 100%
+}
+
+.page-sidebar-collapsed:not(.page-sidebar-fixed) .page-sidebar .slimScrollDiv {
+	overflow: visible!important;
+	height: calc(100% - 83px)!important
+}
+
+.page-sidebar-collapsed .page-sidebar-menu>ul>li {
+	width: 60px;
+	position: relative
+}
+
+.page-sidebar-collapsed .page-sidebar-menu>ul>li>a {
+	width: 60px;
+	position: relative;
+	border: 1px solid transparent;
+	padding: 12px 18px;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li .sub-menu,
+.page-sidebar-collapsed .page-sidebar-menu ul li.active .sub-menu,
+.page-sidebar-collapsed .page-sidebar-menu ul li.open .sub-menu {
+	display: none!important;
+	width: 190px
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li a span:not(.label) {
+	margin-left: 30px
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li a span,
+.page-sidebar-collapsed .page-sidebar-menu ul li a i.accordion-icon {
+	display: none;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li .sub-menu {
+	position: absolute;
+	padding: 12px 0;
+	left: 59px;
+	z-index: 9999;
+	background: #262d35;
+	border-left: 1px solid #2d353e;
+	border-right: 1px solid #2d353e;
+	border-bottom: 1px solid #2d353e;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li .sub-menu a {
+	opacity: 1;
+	padding: 6px 25px;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li a:hover+.sub-menu,
+.page-sidebar-collapsed .page-sidebar-menu ul li .sub-menu:hover,
+.page-sidebar-collapsed .page-sidebar-menu ul li:hover a span,
+.page-sidebar-collapsed .page-sidebar-menu ul li a:hover span {
+	display: inline!important;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu>ul>li:hover>a {
+	width: 249px;
+	color: $color-white;
+	border: 1px solid #2d353e;
+	background: #232a31;
+}
+
+.page-sidebar-collapsed .page-sidebar-menu>ul>li.active>a {
+	color: $color-white;
+	border: 1px solid #2d353e;
+	background: #232a31;
+}
+
+.page-sidebar .slimScrollBar {
+	display: none!important;
+}
+
+.page-sidebar-collapsed .page-sidebar.fixed-sidebar-scroll .slimScrollDiv {
+	width: 250px!important
+}
+
+.page-sidebar-collapsed .page-sidebar-menu ul li.menu-navigation,
+.page-sidebar-collapsed .page-sidebar-menu ul li.menu-elements,
+.page-sidebar-collapsed .page-sidebar-menu ul li.menu-extras,
+.page-sidebar-collapsed .page-sidebar-menu ul li.menu-others,
+.page-sidebar-collapsed .sidebar-footer {
+	display: none
+}
+
+.sidebar-footer {
+	background: #293139;
+	clear: both;
+	bottom: 0;
+	display: block;
+	margin: 0!important;
+	padding: 0!important;
+	position: fixed;
+	width: 249px!important;
+	z-index: 1000;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+.sidebar-footer .pull-left {
+	padding: 10px 0 6px;
+	text-align: center;
+	width: 25%;
+	border-top: 1px solid #36404a;
+}
+
+.sidebar-footer a.pull-left {
+	color: #586777;
+}
+
+.sidebar-footer a.pull-left:hover {
+	text-decoration: none;
+	background: #2d353e;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}

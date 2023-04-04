@@ -1,0 +1,219 @@
+/**********************************************************************
+***********************************************************************
+### Responsive CSS
+*********************************************************************
+*********************************************************************/
+
+@media (min-width: 768px) {
+	.page-header-fixed .page-container.container .page-header {
+		width: 750px
+	}
+}
+
+@media (min-width: 992px) {
+	.page-header-fixed .page-container.container .page-header {
+		width: 970px
+	}
+}
+
+@media (min-width: 1200px) {
+	.page-header-fixed .page-container.container .page-header {
+		width: 1170px
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-nav {
+		float: left;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0
+	}
+	.page-header .navbar-nav>li>a>i {
+		font-size: 14px;
+		vertical-align: text-top
+	}
+	.page-header .navbar-nav>li>a>i[class^="icon-"] {
+		font-size: 19px;
+		vertical-align: top
+	}
+}
+
+@media (max-width: 767px) {
+	.hidden-xs {
+		display: none!important;
+	}
+	.page-header .navbar-default .navbar-brand ul.list-inline li a svg {
+		margin-bottom: -8px;
+	}
+	.login-wrapper .loginbox .login-right {
+		padding: 20px;
+		width: inherit;
+	}
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+	.hidden-sm {
+		display: none!important;
+	}
+	.chat-sidebar .chat-left-sidebar .media .action-icon {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	.hidden-md {
+		display: none!important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hidden-lg {
+		display: none!important;
+	}
+}
+
+@media (max-width:991px) {
+	.page-header .navbar-default {
+		padding: .4rem 1rem;
+	}
+	.page-sidebar-collapsed {
+		display: block
+	}
+	.page-header-fixed .page-header {
+		left: 0!important;
+	}
+	.page-sidebar {
+		position: fixed!important;
+		left: -264px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out
+	}
+	.page-inner:not(.login-page) {
+		padding: 0px 20px;
+	}
+	.page-content,
+	.page-sidebar-collapsed .page-content {
+		width: 100%
+	}
+	.page-sidebar-fixed .page-content,
+	.page-sidebar-fixed.page-sidebar-collapsed .page-content {
+		margin-left: 0
+	}
+	.page-header,
+	.page-header .navbar-default .container-fluid,
+	.page-header .navbar-default .navbar-collapse {
+		padding: 0;
+	}
+	.navbar li {
+		display: inline-block;
+	}
+	#fixed-sidebar-toggle-button,
+	.navbar-nav.navbar-right {
+		display: none
+	}
+	.navbar-collapse {
+		padding: 0!important
+	}
+	.page-sidebar-visible .page-sidebar {
+		left: 0
+	}
+	#sidebar-toggle-button-close {
+		margin-left: auto;
+		float: right;
+		height: 40px;
+		font-size: 25px;
+		margin-top: 0px;
+		display: block;
+		color: $color-white;
+	}
+	.page-sidebar-collapsed #sidebar-toggle-button-close {
+		margin: 0 auto;
+		float: none
+	}
+}
+
+@media (min-width: 320px) {
+	.fc-toolbar .fc-left,
+	.fc-toolbar .fc-right {
+		display: inline-block;
+		float: none;
+	}
+	.container {
+		padding: 0;
+	}
+}
+
+@media (min-width: 576px) {
+	.form-layout-5 .form-control-label {
+		justify-content: flex-end;
+	}
+}
+
+@media (min-width: 768px) {
+	.wizard>.steps>ul li .title,
+	.wizard>.steps .current a,
+	.wizard>.steps .disabled a,
+	.wizard>.steps .done a {
+		display: block;
+		text-align: center;
+		margin-top: 5px;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.pricingTable21 {
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 768px;
+		padding: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 960px;
+		padding: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 1024px;
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1180px;
+	}
+}
+
+@media (max-width:991.98px) {
+	.btn-scroll-top {
+		bottom: .625rem;
+		right: .625rem;
+		z-index: 9999
+	}
+	.btn-scroll-top:focus,
+	.btn-scroll-top:hover {
+		background: #007aff;
+		color: $color-white;
+		text-decoration: none
+	}
+}
+
+@media (max-width:991.98px) {
+	.email-right-sidebar .table td,
+	.email-right-sidebar .table th,
+	.email-right-sidebar .table thead th {
+		white-space: nowrap;
+	}
+}

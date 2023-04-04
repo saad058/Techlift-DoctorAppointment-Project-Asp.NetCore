@@ -1,0 +1,46 @@
+﻿@model DoctorAppointment.Models.DoctorInfo
+
+@{
+    ViewData["Title"] = "RegisterDoctor";
+  //  Layout = null;
+      
+}
+
+<h1 style="text-align: center;"> Doctor Registration</h1>
+
+
+<hr />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form asp-action="RegisterDoctor">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="First_Name" class="control-label"></label>
+                    <input asp-for="First_Name"  placeholder="Enter FirstName" class="form-control" />
+                    <span asp-validation-for="First_Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Last_Name" class="control-label"></label>
+                    <input asp-for="Last_Name" placeholder="Enter LastName" class="form-control" />
+                    <span asp-validation-for="Last_Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmailAddress" class="control-label"></label>
+                    <input asp-for="EmailAddress"  placeholder="Enter Email" class="form-control" />
+                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group text-center">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

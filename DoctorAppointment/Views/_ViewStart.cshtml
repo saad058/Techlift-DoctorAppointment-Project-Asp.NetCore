@@ -1,0 +1,35 @@
+﻿@using System.Web;
+@using Microsoft.AspNetCore.Http;
+@{
+
+    string role = TempData["Role"]?.ToString();
+    var Getrole = Context.Session.GetString("Role");
+
+    if (role == "Admin" || Getrole=="Admin")
+    {
+
+        Layout = "~/Views/Shared/_Layoutdd.cshtml";
+
+    }
+
+    else if (role == "Doctor")
+    {
+        Layout = "~/Views/Shared/Medicr_DoctorLayout.cshtml";
+    }
+
+    else if (role == "Patient")
+    {
+        Layout = "~/Views/Shared/Medicr_PatientLayout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/Medicr_Index.cshtml";
+    }
+
+
+    //Layout = "_Layout";
+
+
+
+}

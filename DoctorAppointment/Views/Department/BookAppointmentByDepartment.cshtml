@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "BookAppointmentByDepartment";
+}
+
+<h1>BookAppointmentByDepartment</h1>
+
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/DoctorAppointment.styles.css" asp-append-version="true" />
+
+<h1>Book Appointment By Date</h1>
+<div class="modal" tabindex="-1" role="dialog" id="modal-form">
+    <div class="modal-dialog modal-dialog-scrollable " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @*View Return Display*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class ="table table-bordered table-dark table-striped">
+<tr>
+    <td>
+        <button class="btn-success" onclick="OpenPopup(this.value)" value="@DateTime.Now.Date">@DateTime.Now.DayOfWeek</button>
+    </td>
+
+     <td>
+        <button class="btn-success" onclick="OpenPopup(this.value)" value="@DateTime.Now.AddDays(1).Date">@DateTime.Now.AddDays(1).DayOfWeek</button>
+    </td>
+
+     <td>
+        <button class="btn-success" onclick="OpenPopup(this.value)" value="@DateTime.Now.AddDays(2).Date">@DateTime.Now.AddDays(2).DayOfWeek</button>
+    </td>
+</tr>
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script>
+    function OpenPopup(Day) @*Ajax call javascript ja ander ajax call hogi *@
+        {
+            $.ajax({
+                type: "GET",
+                url: "/Appointment/AppointmentDays",
+                data: { day: Day },
+                success: function (result) //Pura view uth kr ajaiga Appointment/AppointmentDays"
+                {
+                    $('#modal-form .modal-body').html(result);
+                    $('#modal-form').modal('show');
+                }
+            })
+        }
+    
+</script>
+

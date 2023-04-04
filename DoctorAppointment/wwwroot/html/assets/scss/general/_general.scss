@@ -1,0 +1,342 @@
+/**********************************************************************
+***********************************************************************
+### General CSS
+*********************************************************************
+*********************************************************************/
+
+a {
+	color: #2b3046;
+	font-weight: 500;
+}
+
+a:hover {
+	color: $color-default;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h5,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h5,
+.h5,
+.h6 {
+	margin-bottom: 0.5rem;
+	font-weight: $font-weight-medium;
+	line-height: 1.25;
+	color: #021222;
+}
+
+.h5,
+h5 {
+	font-size: 1.2rem;
+}
+
+body {
+	margin: 0;
+	font-family: $font-family-ibm;
+	font-size: 0.875rem;
+	font-weight: $font-weight-normal;
+	line-height: 1.5;
+	color: #021222;
+	text-align: left;
+	background-color: $color-white;
+}
+  
+.small, small{
+  font-size: 80%;
+  font-weight: inherit; 
+}
+  
+ a.tx-info:hover,
+ a.tx-info:focus{
+	color:#151c29
+}
+ 
+.tx-lato {
+	font-family: $font-family-lato;
+}
+
+.tx-rubik {
+	font-family: $font-family-rubik;
+}
+
+.tx-roboto {
+	font-family: $font-family-roboto;
+}
+
+.tx-open-sans {
+	font-family: $font-family-open-sans;
+}
+
+.tx-ibm {
+	font-family: $font-family-ibm;
+}
+
+.tx-poppins {
+	font-family: $font-family-poppins;
+}
+
+.bg-facebook {
+	color: $color-white;
+	background: #3b5998!important;
+}
+
+.bg-twitter {
+	color: $color-white;
+	background: #00aced!important;
+}
+
+.bg-instagram {
+	color: $color-white;
+	background: #DA2E76!important;
+}
+
+.bg-linkedin {
+	color: $color-white;
+	background: #4875b4!important;
+}
+
+.bg-google-plus {
+	color: $color-white;
+	background: #d34836!important;
+}
+
+.bg-dribbble {
+	color: $color-white;
+	background: #EA4C8A!important;
+}
+
+.bg-flickr {
+	color: $color-white;
+	background: #FF0084!important;
+}
+
+.bg-google {
+	color: $color-white;
+	background: #FB4104!important;
+}
+
+.bg-youtube {
+	color: $color-white;
+	background: #F70000!important;
+}
+
+.bg-pinterest {
+	color: $color-white;
+	background: #C51F26!important;
+}
+
+.tx-facebook {
+	color: #3b5998;
+}
+
+.tx-twitter {
+	color: #00aced;
+}
+
+.tx-instagram {
+	color: #DA2E76;
+}
+
+.tx-linkedin {
+	color: #4875b4;
+}
+
+.tx-google-plus {
+	color: #d34836;
+}
+
+.tx-dribbble {
+	color: #EA4C8A;
+}
+
+.tx-flickr {
+	color: #FF0084;
+}
+
+.tx-google {
+	color: #FB4104;
+}
+
+.tx-youtube {
+	color: #F70000;
+}
+
+.tx-pinterest {
+	color: #C51F26;
+}
+
+.bg-gray {
+	background: #e0e7fd;
+}
+
+.bg-soft-primary {
+	background-color: rgba(93, 120, 255, .15)!important;
+	color: $color-default!important;
+}
+
+.bg-soft-secondary {
+	background-color: rgba(143, 147, 148, 0.15)!important;
+	color: #7d7f80!important;
+}
+
+.bg-soft-warning {
+	background-color: rgba(243, 170, 18, .15)!important;
+	color: hsl(41, 90%, 51%)!important;
+}
+
+.bg-soft-success {
+	background-color: rgba(43, 173, 13, 0.15)!important;
+	color: rgb(43, 173, 13)!important;
+}
+
+.bg-soft-danger {
+	background-color: rgba(244, 67, 54, .15)!important;
+	color: rgb(255, 43, 43)!important;
+}
+
+.bg-soft-teal {
+	background-color: rgba(74, 199, 236, .15)!important;
+	color: #4ac7ec!important;
+}
+
+.bg-soft-pink {
+	background-color: rgba(255, 93, 160, .15)!important;
+	color: #ff5da0!important;
+}
+
+.custom-text-primary {
+	color: $color-default;
+}
+
+.custom-text-primary:hover {
+	color: #000000;
+	text-decoration: none;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+.btn-custom-primary {
+	font-size: 13px;
+	color: $color-white;
+	padding: 0.5rem 1.5rem;
+	background-color: $color-default;
+	border-color: $color-default;
+	border-radius: 2px;
+}
+
+.btn-custom-primary:hover {
+	color: $color-white;
+	text-decoration: none;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.btn-custom-white {
+	font-size: 13px;
+	background-color: $color-white;
+	border-color: $bd-color-default;
+	color: #8b96a7;
+	padding: 0.5rem 1.5rem;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: $font-weight-semibold;
+}
+
+.btn-custom-white:active,
+.btn-white.active {
+	background-color: #f5f6fa;
+}
+
+.btn-custom-white:hover,
+.btn-white:focus {
+	border-color: #8392a5;
+	color: #1b2e4b;
+}
+
+.card-icon-primary {
+	color: $color-default !important;
+	background: rgba(5, 88, 183, 0.10) !important;
+}
+
+.card-icon-danger {
+	color: #dc3545 !important;
+	background: rgba(220, 53, 69, .10)!important;
+}
+
+.card-icon-success {
+	color: #28a745 !important;
+	background: rgba(40, 167, 69, .10)!important;
+}
+
+.card-icon-warning {
+	color: #ffc107 !important;
+	background: rgba(234, 147, 12, 0.1)!important;
+}
+
+.card-icon-teal {
+	color: #17a2b8 !important;
+	background: rgba(23, 162, 184, 0.1)!important;
+}
+
+.page-container {
+	padding-right: 0;
+	padding-left: 0;
+	min-height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.page-container:not(.container) {
+	width: 100%
+}
+
+.page-content {
+	min-height: 60px;
+	vertical-align: bottom;
+	width: calc(100% - 250px);
+	float: right;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .page-content {
+	vertical-align: top
+}
+
+.page-inner {
+	position: relative;
+	padding: 0 30px 0px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.page-inner.full-page {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0
+}
+
+.page-header-fixed .page-inner {
+	margin-top: 60px
+}
+
+.page-footer {
+	background: #F9F9FC;
+	border: $bd-color-default;
+	border-left: none;
+}

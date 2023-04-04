@@ -1,0 +1,44 @@
+/***********************
+Header Search CSS
+************************/
+
+#collapsed-sidebar-toggle-button,
+#search-button {
+	color: #8695a7;
+}
+
+#sidebar-toggle-button-close {
+	display: none
+}
+
+.search-form .twitter-typeahead,
+.search-form .tt-hint,
+.search-form .tt-input,
+.search-form .tt-menu {
+	width: 100%;
+	font-family: $font-family-ibm;
+}
+
+.tt-menu {
+	background: $color-white;
+	width: 100%;
+	padding: 15px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	float: left;
+	background-clip: padding-box;
+	list-style: none;
+	text-align: left;
+	border-bottom: $bd-color-default;
+}
+
+.tt-selectable {
+	cursor: pointer;
+	padding: 10px;
+}
+
+.tt-selectable:hover {
+	background: #f5f5f9;
+}

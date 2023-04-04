@@ -1,0 +1,46 @@
+﻿@model DoctorAppointment.Models.Appointment
+
+@{
+    ViewData["Title"] = "BookApppointmentByPatient";
+    Layout = "~/Views/Shared/Medicr_PatientLayout.cshtml";
+}
+
+<h1>BookApppointmentByPatient</h1>
+
+<h4>Appointment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="BookApppointmentByPatient">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AppointmentDate" class="control-label"></label>
+                <input asp-for="AppointmentDate" class="form-control" />
+                <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatID" class="control-label"></label>
+                <input value="ViewBag.PatId" class="form-control" />
+                <span asp-validation-for="PatID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocID" class="control-label"></label>
+                <input asp-for="DocID" class="form-control" />
+                <span asp-validation-for="DocID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppointmentDay" class="control-label"></label>
+                <input asp-for="AppointmentDay" class="form-control" />
+                <span asp-validation-for="AppointmentDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

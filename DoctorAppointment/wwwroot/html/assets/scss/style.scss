@@ -1,0 +1,71 @@
+/*****************************************************************************
+******************************************************************************
+  Template Name: Avesta - Multipurpose Admin Dashboard Template
+  Template URI: #
+  Description: Avesta is the ultimate admin template for Twitter Bootstrap. It’s what we’re calling the best the admin template for Bootstrap to date. It has a unique, pixel-perfect design, and many fully customized widgets. We gave special attention to design and focussed on building a versatile admin template that could work for an almost unlimited range of applications.
+  Version: 1.0
+******************************************************************************
+******************************************************************************/
+
+
+/**********************************************************************
+***********************************************************************
+### Google Fonts
+*********************************************************************
+*********************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,400,400i,500,500i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/**********************************************************************
+***********************************************************************
+### Required CSS
+*********************************************************************
+*********************************************************************/
+
+@import url('../plugins/bootstrap/css/bootstrap.min.css');
+@import url('../plugins/font-awesome/css/font-awesome.min.css');
+@import url('../plugins/themify/themify.css');
+@import url('../plugins/flag/flag-icon.min.css');
+@import url('app.min.css');
+
+
+/**********************************************************************
+***********************************************************************
+### Variables CSS
+*********************************************************************
+*********************************************************************/
+@import "variables";
+
+
+/**********************************************************************
+***********************************************************************
+### Imported SASS CSS
+*********************************************************************
+*********************************************************************/
+@import "general/general";
+@import "general/header";
+@import "general/sidebar";
+@import "general/dashboard";
+@import "general/mailbox";
+@import "general/app-view";
+@import "general/ui-elements";
+@import "general/grid";
+@import "general/icons";
+@import "general/forms";
+@import "general/tabels";
+@import "general/charts";
+@import "general/plugins";
+@import "general/pages";
+@import "general/authentication";
+@import "general/bootstrap";
+@import "general/pace";
+@import "general/highlight";
+@import "general/miscellaneous";
+@import "general/search";
+@import "general/responsive";
+@import "general/customizer";

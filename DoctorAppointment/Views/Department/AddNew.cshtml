@@ -1,0 +1,42 @@
+﻿@model DoctorAppointment.Models.Department
+
+@{
+    ViewData["Title"] = "AddNew";
+   
+}
+
+<h1>AddNew</h1>
+
+<h4>Department</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddNew">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DepartmentName" class="control-label"></label>
+                <input asp-for="DepartmentName" class="form-control" />
+                <span asp-validation-for="DepartmentName" class="text-danger"></span>
+            </div>
+            <h1>Add Doctor in this Department</h1>
+             <div class="form-group">
+                <label class="control-label">Doctor FirstName</label>
+                <input name="FirstName" class="form-control" />
+             
+            </div>
+            <div class="form-group">
+                <label class="control-label">Doctor LastName</label> @*parameter ma pass hoga with model obj like string lastname*@
+                <input name="LastName" class="form-control" />
+
+            </div>
+            <div class="form-group mb-xl-auto">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,42 @@
+/**********************************************************************
+***********************************************************************
+### Icons CSS
+*********************************************************************
+*********************************************************************/
+
+.icons-list {
+	border-left: 1px solid #eff1f5;
+	border-top: 1px solid #eff1f5;
+}
+
+.icons-list>div {
+	background: $color-white;
+	border-bottom: 1px solid #eff1f5;
+	border-right: 1px solid #eff1f5;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 15px 15px;
+}
+
+.icons-list>div i {
+	display: inline-block;
+	font-size: 20px;
+	text-align: left;
+	padding: 0 15px;
+}
+
+.icons-list>div:hover,
+.icons-list>div:hover span {
+	color: $color-white!important;
+	background: $color-default;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.icons-list .flag-icon {
+	margin: 0 10px;
+}

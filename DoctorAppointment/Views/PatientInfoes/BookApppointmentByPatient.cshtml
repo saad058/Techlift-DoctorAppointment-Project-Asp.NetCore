@@ -1,0 +1,121 @@
+﻿@using System.Web;
+@using Microsoft.AspNetCore.Http;
+
+@model DoctorAppointment.Models.Appointment
+<script src="~/GettingRecordDoctors.js"></script>
+@{
+    ViewData["Title"] = "BookApppointmentByPatient";
+    Layout = "~/Views/Shared/Medicr_PatientLayout.cshtml";
+  //  Model.AppointmentDay = @ViewBag.dayofweek;
+   // Model.AppointmentDay =
+}
+
+<h1>BookApppointmentByPatient</h1>
+
+<h4>Appointment</h4>
+<hr />
+@*<table class="table table-bordered table-dark table-striped">
+    <tr>
+
+        <td>
+            <button class="btn-success" id="button1" value="@DateTime.Now.Date.ToString("dd-MM-yyyy")">@DateTime.Now.DayOfWeek</button>
+        </td>
+
+        <td>
+
+            <button class="btn-success" id="button2" value="@DateTime.Now.AddDays(1).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(1).DayOfWeek</button>
+        </td>
+
+        <td>
+
+            <button class="btn-success" id="button3" value="@DateTime.Now.AddDays(2).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(2).DayOfWeek</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button class="btn-success" id="button4" value="@DateTime.Now.AddDays(3).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(3).DayOfWeek</button>
+        </td>
+
+        <td>
+            <button class="btn-success" id="button5" value="@DateTime.Now.AddDays(4).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(4).DayOfWeek</button>
+        </td>
+
+        <td>
+            <button class="btn-success" id="button6" value="@DateTime.Now.AddDays(5).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(5).DayOfWeek</button>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <button class="btn-success" id="button7" value="@DateTime.Now.AddDays(6).Date.ToString("dd-MM-yyyy")">@DateTime.Now.AddDays(6).DayOfWeek</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="text" id="textbox1" readonly>
+        </td>
+    </tr>
+</table>*@
+
+<div class="row">
+    <div class="col-md-4">
+
+
+
+        <form asp-action="Add" asp-controller="Appointment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                    <label asp-for="AppointmentDate" class="control-label"></label>
+                    <input asp-for="AppointmentDate" class="form-control" readonly />
+                    <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                </div>
+            <div class="form-group">
+                <label asp-for="PatID" class="control-label"></label>
+                <input asp-for="PatID" class="form-control" readonly />
+                <span asp-validation-for="PatID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocID" class="control-label"></label>
+                <input asp-for="DocID"  class="form-control" readonly />
+                @*<input asp-for="DocID" value="@ViewBag.Doctor" class="form-control" readonly />*@
+                <span asp-validation-for="DocID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppointmentDay" class="control-label"></label>
+                <input asp-for="AppointmentDay"  class="form-control"  readonly/>
+                <span asp-validation-for="AppointmentDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#button1,#button2,#button3,#button4,#button5,#button6,#button7').click(function () {
+            alert()
+            var buttonValue = $(this).val();
+            $('#AppointmentDate').val(buttonValue);
+        });
+    });
+
+
+
+</script>
+
+

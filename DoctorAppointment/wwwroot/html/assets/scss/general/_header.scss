@@ -1,0 +1,518 @@
+/**********************************************************************
+***********************************************************************
+### Header CSS
+*********************************************************************
+*********************************************************************/
+
+.page-header {
+	padding-bottom: 0;
+	margin: 0;
+	border-bottom: none;
+	height: 60px;
+	position: relative;
+	background: $color-white;
+}
+
+.page-header-fixed .page-header {
+	position: fixed;
+	z-index: 99;
+	left: 250px;
+	right: 0;
+	top: 0
+}
+
+.page-header-fixed .page-container.container .page-header {
+	padding-right: 15px;
+	padding-left: 195px;
+	left: 0;
+	right: 0;
+	margin: auto
+}
+
+.page-header-fixed.page-sidebar-collapsed .page-container.container .page-header {
+	padding-right: 15px;
+	padding-left: 75px;
+	left: 0;
+	right: 0;
+	margin: auto
+}
+
+.page-sidebar-collapsed.page-header-fixed .page-header {
+	left: 60px
+}
+
+.page-sidebar-fixed .page-header {
+	z-index: 41
+}
+
+.page-header .navbar-default {
+	padding: .5rem 1.5rem;
+	background-color: $color-white;
+	margin-bottom: 0;
+	height: 60px;
+	border-radius: 0;
+	border-bottom: $bd-color-default;
+}
+
+.page-header .navbar-default .container-fluid,
+.page-header .navbar-default .navbar-collapse {
+	height: 60px!important
+}
+
+.page-header .navbar-default .navbar-brand i.fixed-sidebar-button-active {
+	background: $color-white
+}
+
+.page-header .navbar-nav>li.v-divider {
+	display: block;
+	width: 1px;
+	height: 26px;
+	background: #F3F3F3;
+	margin: 21px 15px
+}
+
+.page-header .navbar-nav>li>a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 60px;
+	;
+	color: #4F4F4F;
+	font-size: 11px;
+	text-transform: uppercase
+}
+
+.page-header .navbar-nav>li>a:hover,
+.page-header .navbar-nav>li>a:focus {
+	color: #637282!important
+}
+
+.page-header .navbar-nav>li>a>img {
+	width: 36px;
+	margin-top: -10px;
+	display: inline-block;
+	vertical-align: top
+}
+
+.page-header .navbar-nav>li.user-dropdown>a {
+	margin-right: 0
+}
+
+.open:not(.active)>a {
+	color: $color-white;
+}
+
+.active.open>a i {
+	color: #2b2b2b
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+	color: #1f2229;
+	background-color: transparent
+}
+
+.page-header .navbar-collapse {
+	padding-right: 0;
+	padding-left: 0;
+	overflow-x: visible
+}
+
+.header-right {
+	margin-top: 7px;
+}
+
+.header-right ul li .flag-icon {
+	vertical-align: bottom;
+}
+
+.list-inline-item:not(:last-child) {
+	margin-right: 0;
+}
+
+.header-right .list-inline-item:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.header-right .dropdown-menu {
+	top: 38px;
+	right: -15px;
+	left: auto;
+	width: 305px;
+	padding-bottom: 0px;
+	padding: 0px;
+	font-size: 13px;
+	border-radius: 0px;
+	border: $bd-color-default;
+}
+
+.header-right .dropdown-menu:before {
+	content: "";
+	position: absolute;
+	top: -20px;
+	right: 12px;
+	border: 10px solid #c9cfda;
+	border-color: transparent transparent #c9cfda transparent;
+}
+
+.header-right .dropdown-menu:after {
+	content: "";
+	position: absolute;
+	top: -18px;
+	right: 12px;
+	border: 10px solid $color-white;
+	z-index: 999;
+	border-color: transparent transparent $color-white transparent;
+}
+
+.header-right .select-languages {
+	vertical-align: middle;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.header-right .languages-dropdown {
+	top: 38px;
+	width: 100%;
+	padding: 10px;
+	border: $bd-color-default;
+}
+
+.header-right .languages-dropdown li:hover {
+	background: #f2f4f7;
+}
+
+.header-right .languages-dropdown li a {
+	font-family: $font-family-ibm;
+	padding: 5px 10px;
+	display: block;
+	font-weight: $font-weight-normal;
+}
+
+.header-right .languages-dropdown li img {
+	margin-right: 10px
+}
+
+.header-right .notification-icon,
+.header-right .message-icon {
+	vertical-align: sub;
+}
+
+.header-right .top-message-area,
+.top-notifications-area {
+	position: relative;
+	z-index: 1;
+	border-radius: 2px;
+}
+
+.header-right .top-notifications-area .top-message-heading,
+.header-right .top-message-area .top-message-heading {
+	width: 100%;
+	height: 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: $color-white;
+	border-bottom: 1px solid #eee;
+}
+
+.header-right .top-message-area .top-message-heading>span,
+.header-right .top-notifications-area .notifications-heading>span {
+	color: $color-white;
+	padding: 2px 10px 2px 10px;
+	background-color: #526ef5;
+	border-radius: 40px;
+	font-size: 10px;
+	font-weight: $font-weight-medium;
+	font-family: $font-family-ibm;
+}
+
+.header-right .top-message-area .top-message-footer,
+.header-right .top-notifications-area .notifications-footer {
+	margin-top: 5px;
+	border-top: $bd-color-default;
+	padding: 10px;
+	text-align: center;
+	font-size: 10px;
+	font-weight: $font-weight-medium;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+.header-right .top-header-area .nav-item.dropdown .dropdown-menu .dropdown-item {
+	white-space: normal;
+	color: #666b84;
+	font-size: 13px;
+	font-weight: $font-weight-normal;
+}
+
+.header-right .notifications-box .list-group-item,
+.header-right .message-box .list-group-item {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-top: 1px solid #f3f0f0;
+}
+
+.header-right .notifications-box .list-group-item:first-child,
+.header-right .message-box .list-group-item:first-child {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
+
+.header-right .notifications-box .dropdown-item,
+.header-right .message-box .dropdown-item {
+	padding: 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	white-space: normal;
+}
+
+.avatar {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	white-space: nowrap;
+	vertical-align: bottom;
+}
+
+.avatar-xs {
+	width: 24px;
+	height: 24px;
+	font-size: 8px
+}
+
+.avatar-sm {
+	width: 32px;
+	height: 32px;
+	font-size: 10px
+}
+
+.avatar-md {
+	width: 50px;
+	height: 50px;
+	font-size: 20px
+}
+
+.avatar-lg {
+	width: 65px;
+	height: 65px;
+	font-size: 30px
+}
+
+.avatar-xl {
+	width: 75px;
+	height: 75px;
+	font-size: 40px
+}
+
+.avatar-xxl {
+	width: 100px;
+	height: 100px;
+	font-size: 50px
+}
+
+.avatar-initial {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #8392a5;
+	color: $color-white;
+	font-weight: $font-weight-bold;
+	font-family: $font-family-system;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.avatar img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	border: 0 none;
+	border-radius: 1000px;
+}
+
+.avatar i {
+	width: 8px;
+	height: 8px;
+	display: block;
+	border-radius: 50%;
+	right: 0px;
+	top: 25px;
+	position: absolute;
+	border: 2px solid $color-white;
+}
+
+.avatar-online i {
+	background-color: #11c26d;
+}
+
+.avatar-busy i {
+	background-color: #eb6709;
+}
+
+.avatar-offline i {
+	background-color: #526069;
+}
+
+.wd-12 {
+	width: 12px;
+}
+
+.ht-12 {
+	height: 12px;
+}
+
+.header-right .notifications-box .list-group-item .media-heading,
+.header-right .message-box .list-group-item .media-heading {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 13px;
+	font-weight: $font-weight-medium;
+}
+
+.header-right .notifications-box .list-group-item .media-time,
+.header-right .message-box .list-group-item .media-time {
+	color: #a3afb7;
+	font-size: 10px;
+	font-weight: $font-weight-normal;
+}
+
+.header-right .notifications-box .list-group-item .media-detail,
+.header-right .message-box .list-group-item .media-detail {
+	font-size: 12px;
+	color: #8e939b;
+}
+
+.header-right .dropdown-item.active,
+.dropdown-item:hover {
+	color: $color-default;
+	text-decoration: none;
+	background-color: #f2f4f7;
+}
+
+.header-right .top-notifications-area .notifications-heading {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #eee;
+	border-radius: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.header-right .top-message-area .top-message-heading .heading-title h6,
+.top-notifications-area .notifications-heading .heading-title h6 {
+	color: #2b3544;
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 12px;
+	font-weight: $font-weight-medium;
+	text-transform: uppercase;
+	font-family: $font-family-ibm;
+}
+
+.header-right .dropdown-profile {
+	width: 220px;
+	right: -6px;
+	top: 42px;
+}
+
+.header-right .user-profile-area {
+	padding-bottom: 1rem;
+	z-index: 1;
+	position: relative;
+}
+
+.header-right .user-profile-area .user-profile-heading {
+	width: 100%;
+	height: 70px;
+	border-radius: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-bottom: $bd-color-default;
+}
+
+.header-right .user-profile-area .dropdown-item {
+	white-space: normal;
+	font-size: 13px;
+	padding: 3px 20px;
+	font-family: $font-family-ibm;
+	border-left: 1px solid transparent;
+	text-transform: capitalize;
+	color: #1b2e4b;
+}
+
+.header-right .user-profile-area .dropdown-item:hover {
+	border-left: 1px solid $color-default;
+}
+
+.header-right .user-profile-area .profile-thumbnail {
+	-webkit-box-flex: 0;
+	margin-right: 10px;
+}
+
+.header-right .user-profile-area .profile-text h6 {
+	font-size: 13px;
+	margin-bottom: 0;
+}
+
+.header-right .user-profile-area .profile-text span {
+	color: #adb5c3;
+	font-size: 11px;
+	margin-bottom: 0;
+	display: block;
+}
+
+.header-right .user-profile-area .dropdown-item i {
+	margin-right: 10px;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+.header-right .notification-count,
+.header-right .messages-count {
+	height: 5px;
+	width: 5px;
+	display: block;
+	background: #4570E8;
+	position: relative;
+	right: -15px;
+	top: -27px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}

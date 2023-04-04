@@ -1,0 +1,24 @@
+/**********************************************************************
+***********************************************************************
+### Charts CSS
+*********************************************************************
+*********************************************************************/
+
+.jqstooltip {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+	background: transparent;
+	background-color: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	color: $color-white;
+	font: 10px arial, san serif;
+	text-align: left;
+	white-space: nowrap;
+	padding: 12px;
+	border: 1px solid $color-white;
+	z-index: 10000;
+	display: inline-table;
+}

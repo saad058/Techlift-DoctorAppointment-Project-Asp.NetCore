@@ -1,0 +1,31 @@
+﻿<div id="loader" class="loader">
+    <img src="~/images/VZvw.gif" />
+  
+</div>
+
+<style>
+    #loader {
+        position: fixed;
+        z-index: 9999;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #loader img {
+            width: 100px;
+            height: 100px;
+        }
+</style>
+
+<script>
+    window.onload = function () {
+        var loader = document.getElementById("loader");
+        loader.style.display = "none";
+    }
+</script>
